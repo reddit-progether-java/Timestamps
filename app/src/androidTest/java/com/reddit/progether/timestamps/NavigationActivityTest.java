@@ -53,11 +53,7 @@ public class NavigationActivityTest {
                         isDisplayed()));
         floatingActionButton.perform(click());
 
-        ViewInteraction overflowMenuButton = onView(
-                allOf(withContentDescription("Weitere Optionen"), isDisplayed()));
-        overflowMenuButton.perform(longClick());
 
-        openActionBarOverflowOrOptionsMenu(getInstrumentation().getTargetContext());
 
     }
 
