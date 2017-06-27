@@ -6,7 +6,7 @@ import java.util.Calendar;
 
 public class TimestampsLogic {
 
-	private static ArrayList<Timestamp> timestamps = new ArrayList<Timestamp>();
+	private ArrayList<Timestamp> timestamps = new ArrayList<Timestamp>();
 	
 	//true if the latest Timestamp is one wich was created by the onButtonStartClicked method
 	//used to avoid multiple start Timestamps in a row
@@ -19,12 +19,12 @@ public class TimestampsLogic {
 		}
 	}
 
-	public static void onButtonStopClicked() {
+	public void onButtonStopClicked() {
 		timestamps.add(new Timestamp(new java.sql.Date(System.currentTimeMillis()), TimestampStatus.Geschlossen));
 		isStarted = false;
 	}
 
-	public static String timestampsToString() {
+	public String timestampsToString() {
 		String returnString = "";
 
 		for (Timestamp timestamp : timestamps) {
