@@ -10,9 +10,9 @@ public class TimestampsLogic {
 	
 	//true if the latest Timestamp is one wich was created by the onButtonStartClicked method
 	//used to avoid multiple start Timestamps in a row
-	public static boolean isStarted = false;
+	public boolean isStarted = false;
 	
-	public static void onButtonStartClicked() {
+	public void onButtonStartClicked() {
 		if(!isStarted){
 			timestamps.add(new Timestamp(new java.sql.Date(System.currentTimeMillis()), TimestampStatus.Gestartet));
 			isStarted = true;
