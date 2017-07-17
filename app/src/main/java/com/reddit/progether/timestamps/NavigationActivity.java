@@ -88,7 +88,10 @@ public class NavigationActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_record) {
-            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new RecordingFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RecordingFragment()).commit();
+        }
+        if (id == R.id.nav_display) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DisplayFragment()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

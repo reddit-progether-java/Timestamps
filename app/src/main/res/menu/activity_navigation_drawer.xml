@@ -6,6 +6,10 @@
             android:checked="true"
             android:id="@+id/nav_record"
             android:title="Record" />
+        <item
+            android:checked="true"
+            android:id="@+id/nav_display"
+            android:title="Display" />
         <!--<item-->
             <!--android:id="@+id/nav_camera"-->
             <!--android:icon="@drawable/ic_menu_camera"-->
